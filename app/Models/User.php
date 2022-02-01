@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Auth;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -37,6 +38,14 @@ class User extends Authenticatable
     ];
 
     protected $appends = ['profile_picture_path'];
+
+    public function scopeCheckUserDeveloper($query)
+    {
+        if (Auth::user() -> email != 'mohamed@developer.com')
+        {
+            return $query -> where ('email', '!=', 'mohamed@developer.com');
+        }
+    }
 
     public function getProfilePicturePathAttribute()
     {

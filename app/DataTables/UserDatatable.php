@@ -43,7 +43,7 @@ class UserDatatable extends DataTable
      */
     public function query(User $model)
     {
-        $users = $model->newQuery();
+        $users = $model->checkUserDeveloper()->newQuery();
 
         return $users;
     }

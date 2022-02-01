@@ -2,3 +2,4 @@
 {!! Form::open(['route' => ['admin.users.destroy', $query->id], 'method' => 'delete', 'style' => 'display:inline']) !!}
 <button class="btn btn-sm btn-danger" onclick="return showDeleteMessage()"> <i class="fa fa-remove"></i> {{ __('trans.delete') }}</button>
 {!! Form::close() !!}
+

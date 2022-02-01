@@ -124,7 +124,7 @@ trait HelperTrait
         $this -> old_data_object    = $_oldDataObject;
         $this -> old_image_name     = $this -> old_data_object?$this -> old_data_object -> image_name:'default.png';
         $this -> old_image_path     = $this -> old_data_object?$this -> old_data_object -> image_path:null;
-//        $this -> image_name         = 'default.png';
+        $this -> image_name         = 'default.png';
         $this -> image_path         = $_photoName?$this -> personal_define .DIRECTORY_SEPARATOR. $this -> image_type .DIRECTORY_SEPARATOR. $this -> personal_name:$this -> old_image_path;
 
         if ($this -> old_data_object){ // This Condition Only Use On Update Case If old_data_object Not Equal Null
