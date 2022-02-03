@@ -8,8 +8,9 @@
 {{--                    </li>--}}
 {{--                    @endforeach--}}
 
-{{--<div class="skitter skitter-large with-dots" style="margin: 0 auto">--}}
-{{--    <ul>--}}
+<div id="slideShow" style="max-width: 800px; margin: 0 auto">
+    <div class="skitter skitter-large with-dots">
+        <ul>
 {{--            @php($image_class_shuffle = [--}}
 {{--                    'cut',--}}
 {{--                    'swapBlocks',--}}
@@ -22,26 +23,30 @@
 {{--                    'hideBars',--}}
 {{--                    'cubeSize',--}}
 {{--          ])--}}
+{{--            class="{{ $image_class_shuffle[ rand(0, 9) ] }}"--}}
+            @foreach ($slideShow_images as $image)
+                <li>
+                    <img
+                         src="{{ asset('storage'.DIRECTORY_SEPARATOR.$image->image_path.DIRECTORY_SEPARATOR.$image->image_name) }}"
+                         alt="{{ $image->image_name }}">
+                </li>
+            @endforeach
+
+        </ul>
+    </div>
+</div>
+
+{{--<div style="max-width: 800px; margin: 0 auto">--}}
+{{--    <ul class="rslides">--}}
 {{--        @foreach ($slideShow_images as $image)--}}
 {{--            <li>--}}
-{{--                <img class="{{ $image_class_shuffle[ rand(0, 9) ] }}" src="{{ asset('storage'.DIRECTORY_SEPARATOR.$image->image_path.DIRECTORY_SEPARATOR.$image->image_name) }}" alt="{{ $image->image_name }}">--}}
+{{--                <img--}}
+{{--                    src="{{ asset('storage'.DIRECTORY_SEPARATOR.$image->image_path.DIRECTORY_SEPARATOR.$image->image_name) }}"--}}
+{{--                    alt="{{ $image->image_name }}">--}}
 {{--            </li>--}}
 {{--        @endforeach--}}
-
 {{--    </ul>--}}
 {{--</div>--}}
-
-<div style="max-width: 800px; margin: 0 auto">
-    <ul class="rslides">
-        @foreach ($slideShow_images as $image)
-            <li>
-                <img
-                    src="{{ asset('storage'.DIRECTORY_SEPARATOR.$image->image_path.DIRECTORY_SEPARATOR.$image->image_name) }}"
-                    alt="{{ $image->image_name }}">
-            </li>
-        @endforeach
-    </ul>
-</div>
 
 
 
