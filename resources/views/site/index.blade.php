@@ -85,23 +85,59 @@
 
 @endsection
 @push('links')
-    <link rel="stylesheet" href="{{ asset('site_files/assets/slideShow/css/skitter.css') }}">
+{{--    <link rel="stylesheet" href="{{ asset('site_files/assets/slideShow/css/skitter.css') }}">--}}
+<link rel="stylesheet" href="{{ asset('site_files/assets/slideShow/css/responsiveslides.css') }}">
     <style>
 
     </style>
 @endpush
 
 @push('scripts')
-    <script src="{{ asset('site_files/assets/slideShow/js/jquery.skitter.min.js') }}"></script>
-    <script src="{{ asset('site_files/assets/slideShow/js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ asset('site_files/assets/slideShow/js/responsiveslides.min.js') }}"></script>
     <script>
         $(function() {
-            $(".skitter-large").skitter({
-                navigation: true,
-                dots: false,
-                progressbar: true,
+            $(".rslides").responsiveSlides({
+                auto: true,             // Boolean: Animate automatically, true or false
+                speed: 500,            // Integer: Speed of the transition, in milliseconds
+                // timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+                // pager: false,           // Boolean: Show pager, true or false
+                // nav: true,             // Boolean: Show navigation, true or false
+                random: true,          // Boolean: Randomize the order of the slides, true or false
+                pause: true,           // Boolean: Pause on hover, true or false
+                pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+                // prevText: "Previous",   // String: Text for the "previous" button
+                // nextText: "Next",       // String: Text for the "next" button
+                maxwidth: "800",           // Integer: Max-width of the slideshow, in pixels
+                // navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+                // manualControls: "",     // Selector: Declare custom pager navigation
+                // namespace: "rslides",   // String: Change the default namespace used
+                // before: function(){},   // Function: Before callback
+                // after: function(){}     // Function: After callback
             });
         });
     </script>
+    {{--    <script src="{{ asset('site_files/assets/slideShow/js/jquery.skitter.min.js') }}"></script>--}}
+{{--    <script src="{{ asset('site_files/assets/slideShow/js/jquery.easing.1.3.js') }}"></script>--}}
+{{--    <script>--}}
+{{--        $(function() {--}}
+{{--            $(".skitter-large").skitter({--}}
+{{--                navigation: true,--}}
+{{--                dots: false,--}}
+{{--                progressbar: true,--}}
+{{--                // controls: true,--}}
+{{--                auto_play: false,--}}
+{{--                // responsive: {--}}
+{{--                // small: { animation: 'fade',--}}
+{{--                // max_width: 768,--}}
+{{--                // suffix: '-small'--}}
+{{--                // },--}}
+{{--                // medium: { animation: 'directionRight',--}}
+{{--                // max_width: 1024,--}}
+{{--                // suffix: '-medium'--}}
+{{--                // }--}}
+{{--                // }--}}
+{{--            });--}}
+{{--        });--}}
+{{--    </script>--}}
 @endpush
 
