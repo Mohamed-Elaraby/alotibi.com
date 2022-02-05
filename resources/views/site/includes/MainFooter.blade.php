@@ -39,7 +39,7 @@
                         <br>Design By: <a href="https://www.facebook.com/mohamedelsayed300/" target="_blank" title="Mohamed El Sayed">Mohamed El Sayed</a></p>
                     <ul>
                         <li><a target="_blank" href="https://www.instagram.com/alotaibi.est99"><i class="fa fa-instagram"></i></a></li>
-                        <li><a target="_blank" href="{{ route('admin.dashboard') }}">تسجيل الدخول</a></li>
+                        <li><a target="_blank" href="{{ route('admin.dashboard') }}" style="font-size: 14px">تسجيل الدخول</a></li>
                     </ul>
                 </div>
             </div>
