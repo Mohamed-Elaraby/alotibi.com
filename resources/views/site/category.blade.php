@@ -21,7 +21,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <img class="img-thumbnail" style="max-width: 100%" src=" {{ asset('storage' . DIRECTORY_SEPARATOR . $header_cover->image_path . DIRECTORY_SEPARATOR . $header_cover->image_name) }}" alt="">
+                    @if ($header_cover)
+                        <img class="img-thumbnail" style="max-width: 100%" src=" {{ asset('storage' . DIRECTORY_SEPARATOR . $header_cover->image_path . DIRECTORY_SEPARATOR . $header_cover->image_name) }}" alt="">
+                    @endif
                 </div>
             </div>
         </div>
