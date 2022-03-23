@@ -38,7 +38,7 @@ class DropzoneController extends Controller
 
         $image_source = $request->file('file');
 
-        $image_data = $this->uploadImageProcessing($image_source, 'categories', $category->name, 'gallery', 'public', 370, 390); // Upload Image With Trait
+        $image_data = $this->uploadImageProcessing($image_source, 'categories', $category->name, 'gallery', 'public', 370, 450); // Upload Image With Trait
 
         $category -> images()->create($image_data);
 
