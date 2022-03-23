@@ -77,7 +77,7 @@
                                     </form>
                                     <span class="image_dimensions_asterisk">
                                         <strong>*</strong>
-                                        يجب ان تكون ابعاد الصور [العرض : 370px , الطول : 450px ]
+                                        يجب ان تكون ابعاد الصور [العرض : 370px , الطول : 500px ]
                                     </span>
                                     <br>
                                     <button class="btn btn-success form-control" id="upload">حفظ التعديلات</button>
@@ -197,8 +197,8 @@
                 });
 
                 this.on("thumbnail", function (file) {
-                    if (file.height != 450 || file.width != 370) {
-                        alert("انتبة ابعاد الصور غير متطابقة [العرض : 370px , الطول : 450px ]");
+                    if (file.height != 500 || file.width != 370) {
+                        alert("انتبة ابعاد الصور غير متطابقة [العرض : 370px , الطول : 500px ]");
                     }
                 });
 
