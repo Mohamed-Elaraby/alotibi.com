@@ -180,7 +180,7 @@ trait HelperTrait
                     $this -> image_name         = $photo?str_replace(' ', '_', $photo -> getClientOriginalName()):$this -> old_image_name;
                     $image = Image::make($photo);
                     $image -> resize($this -> image_width, $this -> image_height);
-                    $image -> save(public_path('storage' .DIRECTORY_SEPARATOR. $this -> image_path.DIRECTORY_SEPARATOR.$this -> image_name));
+                    $image -> save(public_path('storage' .DIRECTORY_SEPARATOR. $this -> image_path.DIRECTORY_SEPARATOR.$this -> image_name), 100);
                     $m = ['image_path' => $this -> image_path, 'image_name' => $this -> image_name];
                     array_push($myArray, $m);
 
@@ -190,7 +190,7 @@ trait HelperTrait
                 $this -> image_name         = $_photoName?str_replace(' ', '_', $_photoName -> getClientOriginalName()):$this -> old_image_name;
                 $image = Image::make($_photoName);
                 $image -> resize($this -> image_width, $this -> image_height);
-                $image -> save(public_path('storage' .DIRECTORY_SEPARATOR. $this -> image_path.DIRECTORY_SEPARATOR.$this -> image_name));
+                $image -> save(public_path('storage' .DIRECTORY_SEPARATOR. $this -> image_path.DIRECTORY_SEPARATOR.$this -> image_name), 100);
 
             }
 
